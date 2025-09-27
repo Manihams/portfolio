@@ -5,8 +5,8 @@ export default function AboutPage() {
           <h1 className="text-4xl font-bold mb-6 text-center">About Me</h1>
           
           <p className="text-lg leading-relaxed mb-4">
-            Hi, I’m <span className="font-semibold">Manihams Suraparaju</span>, 
-            a Junior majoring in Computer Science. I'm passionate about building interactive projects, 
+            Hi, I&#39;m <span className="font-semibold">Manihams Suraparaju</span>, 
+            a Junior majoring in Computer Science. I&#39;m passionate about building interactive projects, 
             web apps, and learning modern frameworks like Next.js, React, and Tailwind CSS.
           </p>
   
@@ -16,7 +16,7 @@ export default function AboutPage() {
           </p>
   
           <p className="text-lg leading-relaxed mb-4">
-            Outside of coding, I’m passionate about <span className="font-semibold">cricket</span> 🏏 
+            Outside of coding, I&#39;m passionate about <span className="font-semibold">cricket</span> 🏏 
             and enjoy teamwork both on the field and in projects. 
             I also like playing pickleball with my friends and exploring new places.
           </p>
