@@ -18,6 +18,7 @@ export const metadata: Metadata = {
   description: "Digital Resume",
 };
 
+
 export default function RootLayout({
   children,
 }: Readonly<{

@@ -27,6 +27,14 @@ export default function Home() {
         </p>
 
         <div className="flex flex-wrap gap-4">
+        <a
+            href="https://docs.google.com/document/d/1MpI8dXfAjt3CHbITYu5dSbVrfldlhm_1DKZhpv9dmEU/edit?tab=t.0"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700"
+          >
+            Resume
+          </a>
           <a
             href="https://manihams.github.io/Unity-Game/"
             target="_blank"
