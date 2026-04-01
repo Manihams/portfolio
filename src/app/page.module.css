@@ -1,0 +1,94 @@
+/* page.module.css */
+
+/* ── Google Fonts — add this to your layout.jsx instead: ────────────────────
+   import { Syne, DM_Mono, DM_Sans } from 'next/font/google'
+   const syne   = Syne({ subsets: ['latin'], variable: '--font-syne' })
+   const dmMono = DM_Mono({ weight: ['400','500'], subsets: ['latin'], variable: '--font-mono' })
+   const dmSans = DM_Sans({ subsets: ['latin'], variable: '--font-sans' })
+   Then add the variables to <body className={`${syne.variable} ${dmMono.variable} ${dmSans.variable}`}>
+   ─────────────────────────────────────────────────────────────────────────── */
+
+   .root {
+    font-family: var(--font-body);
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  .root.visible { opacity: 1; transform: translateY(0); }
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    background: rgba(10, 10, 15, 0.85);
+    backdrop-filter: blur(12px);
+    z-index: 100;
+  }
+  .logo { font-family: var(--font-display); font-weight: 800; font-size: 15px; letter-spacing: 0.08em; color: var(--text); }
+  .accent { color: var(--accent); }
+  .navLinks { display: flex; gap: 32px; list-style: none; }
+  .navLink { font-family: var(--font-mono); font-size: 12px; color: var(--text-muted); text-decoration: none; letter-spacing: 0.05em; transition: color 0.2s; }
+  .navLink:hover { color: var(--accent); }
+  .hero { display: grid; grid-template-columns: 1fr 200px; gap: 40px; align-items: center; padding: 80px 40px 64px; }
+  .heroText { display: flex; flex-direction: column; }
+  .badge { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-mono); font-size: 11px; color: var(--accent); letter-spacing: 0.1em; margin-bottom: 24px; }
+  .dot { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); flex-shrink: 0; animation: pulse 2s infinite; }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.25; } }
+  .name { font-family: var(--font-display); font-weight: 800; font-size: clamp(38px, 6vw, 58px); line-height: 1.0; letter-spacing: -0.02em; color: #f5f3ee; margin-bottom: 22px; }
+  .nameAccent { font-style: normal; color: var(--accent); }
+  .tagline { font-size: 15px; font-weight: 300; color: var(--text-muted); line-height: 1.75; max-width: 480px; margin-bottom: 36px; }
+  .tagline strong { color: #c8c6c0; font-weight: 500; }
+  .ctaRow { display: flex; gap: 12px; flex-wrap: wrap; }
+  .btnPrimary { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.06em; padding: 12px 24px; background: var(--accent); color: #0a0a0f; border: none; border-radius: 6px; cursor: pointer; font-weight: 500; text-decoration: none; transition: opacity 0.2s; display: inline-flex; align-items: center; }
+  .btnPrimary:hover { opacity: 0.82; }
+  .btnGhost { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.06em; padding: 12px 24px; background: transparent; color: var(--text-muted); border: 1px solid rgba(255,255,255,0.12); border-radius: 6px; cursor: pointer; text-decoration: none; transition: border-color 0.2s, color 0.2s; display: inline-flex; align-items: center; }
+  .btnGhost:hover { border-color: var(--accent); color: var(--accent); }
+  .avatarWrap { position: relative; display: flex; justify-content: center; }
+  .avatarFrame { width: 180px; height: 180px; border-radius: 50%; border: 2px solid var(--accent); padding: 4px; flex-shrink: 0; }
+  .avatarInner { width: 100%; height: 100%; border-radius: 50%; background: #1a1a2e; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 48px; font-weight: 800; color: var(--accent); overflow: hidden; position: relative; }
+  .statusChip { position: absolute; bottom: 6px; left: 50%; transform: translateX(-50%); background: var(--bg); border: 1px solid rgba(240,165,0,0.3); border-radius: 20px; padding: 4px 14px; font-family: var(--font-mono); font-size: 10px; color: var(--accent); white-space: nowrap; display: flex; align-items: center; gap: 6px; }
+  .divider { height: 1px; background: linear-gradient(to right, transparent, var(--border), transparent); margin: 0 40px; }
+  .section { padding: 56px 40px; }
+  .sectionLabel { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em; color: var(--accent); margin-bottom: 32px; display: flex; align-items: center; gap: 14px; }
+  .sectionLabel::after { content: ''; flex: 1; height: 1px; background: var(--border); max-width: 120px; }
+  .projectsGrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 28px; transition: border-color 0.25s, transform 0.2s; cursor: default; display: flex; flex-direction: column; }
+  .cardHovered { border-color: var(--border-hover); transform: translateY(-2px); }
+  .cardTags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
+  .cardTag { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.06em; color: #777; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.06); border-radius: 4px; padding: 3px 9px; }
+  .cardTitle { font-family: var(--font-display); font-weight: 700; font-size: 18px; color: #f0f0eb; margin-bottom: 10px; }
+  .cardDesc { font-size: 13px; font-weight: 300; color: #666; line-height: 1.65; flex: 1; margin-bottom: 22px; }
+  .cardFooter { display: flex; gap: 16px; }
+  .cardLink { font-family: var(--font-mono); font-size: 11px; color: var(--accent); text-decoration: none; letter-spacing: 0.05em; transition: opacity 0.2s; }
+  .cardLink:hover { opacity: 0.7; }
+  .skillsGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .skillGroup { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 22px; }
+  .skillGroupTitle { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 14px; }
+  .pillRow { display: flex; flex-wrap: wrap; gap: 7px; }
+  .pill { font-size: 12px; color: #999; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.07); border-radius: 4px; padding: 5px 11px; }
+  .contactGrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .contactCard { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 22px 28px; text-decoration: none; transition: border-color 0.2s; display: block; }
+  .contactCard:hover { border-color: var(--border-hover); }
+  .contactLabel { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.1em; color: var(--text-dim); margin-bottom: 8px; }
+  .contactValue { font-size: 15px; color: #c8c6c0; font-weight: 400; }
+  .footer { padding: 24px 40px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+  .footerText { font-family: var(--font-mono); font-size: 11px; color: #444; }
+  @media (max-width: 768px) {
+    .nav { padding: 16px 20px; }
+    .hero { grid-template-columns: 1fr; padding: 48px 20px 40px; }
+    .avatarWrap { order: -1; }
+    .avatarFrame { width: 120px; height: 120px; }
+    .avatarInner { font-size: 32px; }
+    .section { padding: 40px 20px; }
+    .divider { margin: 0 20px; }
+    .projectsGrid { grid-template-columns: 1fr; }
+    .skillsGrid { grid-template-columns: 1fr; }
+    .contactGrid { grid-template-columns: 1fr; }
+    .footer { padding: 20px; flex-direction: column; align-items: flex-start; }
+  }

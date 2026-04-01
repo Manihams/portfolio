@@ -1,23 +1,6 @@
-/* about.module.css — place this at app/about/about.module.css */
+/* app/about/about.module.css */
 
-:root {
-    --bg:        #0a0a0f;
-    --bg-card:   #111118;
-    --text:      #e8e6e0;
-    --text-muted:#888;
-    --text-dim:  #555;
-    --accent:    #f0a500;
-    --border:    rgba(255, 255, 255, 0.07);
-    --border-hover: rgba(240, 165, 0, 0.3);
-  
-    --font-display: var(--font-syne, 'Syne', sans-serif);
-    --font-mono:    var(--font-mono, 'DM Mono', monospace);
-    --font-body:    var(--font-sans, 'DM Sans', sans-serif);
-  }
-  
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  
-  .root {
+.root {
     font-family: var(--font-body);
     background: var(--bg);
     color: var(--text);
@@ -32,7 +15,6 @@
     transform: translateY(0);
   }
   
-  /* ── Nav ── */
   .nav {
     display: flex;
     justify-content: space-between;
@@ -74,9 +56,8 @@
   }
   
   .navLink:hover { color: var(--accent); }
-  .navLinkActive  { color: var(--accent) !important; }
+  .navLinkActive { color: var(--accent) !important; }
   
-  /* ── Header ── */
   .header {
     padding: 72px 40px 56px;
   }
@@ -123,14 +104,12 @@
     color: var(--text-muted);
   }
   
-  /* ── Divider ── */
   .divider {
     height: 1px;
     background: linear-gradient(to right, transparent, var(--border), transparent);
     margin: 0 40px;
   }
   
-  /* ── Sections ── */
   .section { padding: 56px 40px; }
   
   .sectionLabel {
@@ -152,7 +131,6 @@
     max-width: 120px;
   }
   
-  /* ── Two column ── */
   .twoCol {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -160,7 +138,6 @@
     align-items: start;
   }
   
-  /* ── Bio ── */
   .bio {
     display: flex;
     flex-direction: column;
@@ -179,7 +156,6 @@
     font-weight: 500;
   }
   
-  /* ── Facts card ── */
   .factsCard {
     background: var(--bg-card);
     border: 1px solid var(--border);
@@ -212,7 +188,6 @@
     text-align: right;
   }
   
-  /* ── Interests ── */
   .interestsGrid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -244,7 +219,6 @@
     text-align: center;
   }
   
-  /* ── CTA ── */
   .ctaBlock {
     display: flex;
     flex-direction: column;
@@ -304,7 +278,6 @@
     color: var(--accent);
   }
   
-  /* ── Footer ── */
   .footer {
     padding: 24px 40px;
     border-top: 1px solid var(--border);
@@ -321,13 +294,12 @@
     color: #444;
   }
   
-  /* ── Responsive ── */
   @media (max-width: 768px) {
-    .nav      { padding: 16px 20px; }
-    .header   { padding: 48px 20px 40px; }
-    .section  { padding: 40px 20px; }
-    .divider  { margin: 0 20px; }
-    .twoCol   { grid-template-columns: 1fr; gap: 40px; }
-    .interestsGrid { grid-template-columns: repeat(2, 1fr); }
-    .footer   { padding: 20px; flex-direction: column; align-items: flex-start; }
+    .nav            { padding: 16px 20px; }
+    .header         { padding: 48px 20px 40px; }
+    .section        { padding: 40px 20px; }
+    .divider        { margin: 0 20px; }
+    .twoCol         { grid-template-columns: 1fr; gap: 40px; }
+    .interestsGrid  { grid-template-columns: repeat(2, 1fr); }
+    .footer         { padding: 20px; flex-direction: column; align-items: flex-start; }
   }
