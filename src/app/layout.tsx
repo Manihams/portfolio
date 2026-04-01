@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+/*import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Link from "next/link";
 import "./globals.css";
@@ -29,8 +29,8 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
       >
-        {/* Navbar */}
-        <header className="bg-white shadow-md">
+        {/* Navbar */
+       /* <header className="bg-white shadow-md">
           <nav className="container mx-auto flex justify-between items-center p-4">
             <h1 className="text-xl font-bold">
               <Link href="/">MyPortfolio</Link>
@@ -43,10 +43,10 @@ export default function RootLayout({
           </nav>
         </header>
 
-        {/* Page Content */}
-        <main className="flex-grow container mx-auto p-6">{children}</main>
+        {/* Page Content */
+       /* <main className="flex-grow container mx-auto p-6">{children}</main>
 
-        {/* Footer */}
+        {/* Footer 
         <footer className="bg-black-200 mt-8 py-4">
           <div className="container mx-auto text-center text-sm text-black-700">
             © {new Date().getFullYear()} MyPortfolio. Built with Next.js & Tailwind.
@@ -55,4 +55,30 @@ export default function RootLayout({
       </body>
     </html>
   );
+}*/
+
+import type { Metadata } from "next";
+import { Syne, DM_Mono, DM_Sans } from "next/font/google";
+import "./globals.css";
+
+const syne = Syne({ subsets: ["latin"], variable: "--font-syne" });
+const dmMono = DM_Mono({ weight: ["400", "500"], subsets: ["latin"], variable: "--font-mono" });
+const dmSans = DM_Sans({ subsets: ["latin"], variable: "--font-sans" });
+
+export const metadata: Metadata = {
+  title: "Manihams Suraparaju",
+  description: "CS Student · Full-Stack & Game Development",
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{ children: React.ReactNode }>) {
+  return (
+    <html lang="en">
+      <body className={`${syne.variable} ${dmMono.variable} ${dmSans.variable}`}>
+        {children}
+      </body>
+    </html>
+  );
 }
+
