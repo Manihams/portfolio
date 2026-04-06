@@ -48,7 +48,7 @@ const PROJECTS: Project[] = [
       "Chrome browser extension for tracking focus sessions with an interactive popup UI. Built, packaged, and deployed locally for Chrome.",
     tags: ["React", "CSS", "Chrome API"],
     links: [
-      { label: "GitHub ↗", href: "https://github.com/manihams" },
+      { label: "GitHub ↗", href: "https://github.com/utk-cs340-fall25/FocusFlowTracker" },
     ],
   },
   {
@@ -57,7 +57,7 @@ const PROJECTS: Project[] = [
       "Survival shooter with custom enemy AI, player health system, and real-time scoring. Physics-based movement using Unity's engine.",
     tags: ["Unity", "C#", "Physics"],
     links: [
-      { label: "Play (WebGL) ↗", href: "https://manihams.github.io/Unity-Game/" },
+      { label: "Play (WebGL) ↗", href: "https://github.com/Manihams/CS302-Final-project-Zomboid/tree/main" },
     ],
   },
 ];
@@ -144,9 +144,9 @@ export default function Home() {
           </h1>
 
           <p className={styles.tagline}>
-            CS sophomore at UTK building things with{" "}
+            CS Junior at UTK building things with{" "}
             <strong>React</strong>, <strong>Unity</strong>, and{" "}
-            <strong>Next.js</strong>. I ship web apps, browser extensions, and
+            <strong>Next.js</strong>. I build web apps, browser extensions, and
             games. Here&apos;s my work.
           </p>
 
