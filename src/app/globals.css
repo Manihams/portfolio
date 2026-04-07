@@ -30,6 +30,11 @@ html, body {
 }
 */
 
+:root {
+  --text-muted: #b8b8b8;
+  --text-dim: #9a9a9a;
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
