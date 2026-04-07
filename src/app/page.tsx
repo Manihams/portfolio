@@ -29,7 +29,6 @@ type ContactItem = {
   href: string;
 };
 
-const NAV_LINKS = ["work", "about", "contact"];
 
 const PROJECTS: Project[] = [
   {
@@ -119,13 +118,9 @@ export default function Home() {
           MS<span className={styles.accent}>.</span>
         </span>
         <ul className={styles.navLinks}>
-          {NAV_LINKS.map((link) => (
-            <li key={link}>
-              <a href={`#${link}`} className={styles.navLink}>
-                {link}
-              </a>
-            </li>
-          ))}
+          <li><a href="#work" className={styles.navLink}>work</a></li>
+          <li><a href="/about" className={styles.navLink}>about</a></li>
+          <li><a href="#contact" className={styles.navLink}>contact</a></li>
         </ul>
       </nav>
 
