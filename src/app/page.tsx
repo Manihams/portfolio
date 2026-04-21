@@ -39,7 +39,7 @@ const PROJECTS: Project[] = [
     links: [
       { label: "Live site ↗", href: "https://taskflow-client-rouge.vercel.app" },
       { label: "API ↗", href: "https://taskflow-api-production-f091.up.railway.app/tasks" },
-      { label: "GitHub ↗", href: "https://github.com/manihams28/taskflow-api" },
+      { label: "GitHub ↗", href: "https://github.com/Manihams/taskflow-api" },
     ],
   },
   {
