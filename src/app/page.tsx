@@ -32,13 +32,14 @@ type ContactItem = {
 
 const PROJECTS: Project[] = [
   {
-    title: "Portfolio Website",
+    title: "TaskFlow API & Dashboard",
     description:
-      "Responsive personal site with live Unity WebGL game embed, project showcase, and continuous deployment via Vercel + Turbopack.",
-    tags: ["Next.js", "React", "Tailwind", "Vercel"],
+      "Full-stack task management app with a Java Spring Boot REST API backend, PostgreSQL database, and React frontend. Deployed live with Railway and Vercel.",
+    tags: ["Java", "Spring Boot", "PostgreSQL", "React"],
     links: [
-      { label: "Live site ↗", href: "https://portfolio-4qo9.vercel.app/" },
-      { label: "GitHub ↗", href: "https://github.com/manihams" },
+      { label: "Live site ↗", href: "https://taskflow-client-rouge.vercel.app" },
+      { label: "API ↗", href: "https://taskflow-api-production-f091.up.railway.app/tasks" },
+      { label: "GitHub ↗", href: "https://github.com/manihams28/taskflow-api" },
     ],
   },
   {
@@ -68,11 +69,11 @@ const SKILLS: SkillGroup[] = [
   },
   {
     category: "Frameworks",
-    items: ["React", "Next.js", "Tailwind CSS", "Unity"],
+    items: ["React", "Next.js", "Spring Boot", "Tailwind CSS", "Unity"],
   },
   {
     category: "Tools",
-    items: ["Git", "GitHub", "Vercel", "Chrome API"],
+    items: ["Git", "GitHub", "Vercel", "Chrome API", "Railway", "PostgreSQL"],
   },
 ];
 
@@ -140,8 +141,8 @@ export default function Home() {
 
           <p className={styles.tagline}>
             CS Junior at UTK building things with{" "}
-            <strong>React</strong>, <strong>Unity</strong>, and{" "}
-            <strong>Next.js</strong>. I build web apps, browser extensions, and
+            <strong>Java</strong>, <strong>React</strong>, and{" "}
+            <strong>Spring Boot</strong>. I build full-stack apps, browser extensions, and
             games. Here&apos;s my work.
           </p>
 
